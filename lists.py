@@ -3,26 +3,27 @@
 def basic_lists():
     fruits = ["orange", "apple", "banana", "mango"]
 
-    # fruits[-1]  # Last item in the list, negative indexing means beginning from the end
-    # fruits[1:3]  # Returns 2nd and 3rd elements 
-    # fruits[2] = "pear"  # Change 3rd element 
+    fruits.index("banana") # 2
+    fruits[-1]  # Last item in the list, negative indexing means beginning from the end
+    fruits[1:3]  # Returns 2nd and 3rd elements 
+    fruits[2] = "pear"  # Change 3rd element 
 
-    # print("apple" in fruits)  # Use in to check
+    print("apple" in fruits)  # Use in to check
 
-    # for i in fruits:  # Loop through
-    #    print(i)
+    for i in fruits:  # Loop through
+       print(i)
 
-    # fruits.append("avo")  # Add an element at the end
-    # fruits.insert(2, "avo")
+    fruits.append("avo")  # Add an element at the end
+    fruits.insert(2, "avo")
 
-    # fruits.remove("orange")  # Remove an element
-    # e = fruits.pop(2)        # Remove an element at index
-    # del fruits[1:3]  # Remove slice in the list. del can be used to delete a variable    
+    fruits.remove("orange")  # Remove an element
+    e = fruits.pop(2)        # Remove an element at index
+    del fruits[1:3]  # Remove slice in the list. del can be used to delete a variable    
 
-    # fruits.sort()  # Sort the list
+    fruits.sort()  # Sort the list
 
-    # fruits.clear()  #Clear the list      
-    # f = fruits.copy()  # Copy the list
+    fruits.clear()  #Clear the list      
+    f = fruits.copy()  # Copy the list
 # basic_lists()
 
 # Assigning list values to multiple variables
