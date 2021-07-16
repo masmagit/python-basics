@@ -24,14 +24,23 @@ tuples_examples()
 # A set is an unordered, unindexed collection of unique elements. Defined by { }
 # Items cannot be changed (but can be removed), new items can be added
 def sets():
+    print("sets()")
     s = set()  # create an empty set
     s = {"apple", "banana", "mango"}
+    # access next element via iterator object and next
+    print(next(iter(s)))
     s2 = {"apple", "pepper", "tomato"}
     s.add("kiwi")  # added at random position
     s.remove("banana")
     s.update(s2)  # Add elements from s2 to set s
-    s3 = s.union(s2)  # Unite sets, duplicated elements appear only once
-    print(s3)
+    
+
+    s1 = {1, 2, 3}
+    s2 = {3, 4, 5}
+    s_unite = s1.union(s2)  # Unite sets, duplicated elements appear only once {1, 2, 3, 4, 5}
+    s_common = s1 & s2  # {3}
+    s1_diff = s1 - s2  # {1, 2}
+    s_mutual_diff = s1 ^ s2  # {1, 2, 4, 5}
 sets()
 
 
@@ -43,17 +52,19 @@ di = {
     "one" : 1, 
     "two" : 2, 
     "three" : 3, 
-    "four" : 4
+    "four" : 4,
 }
 dines = {
     "group1" : { 
         "a" : "1",
         "b" : "2"
     },
-    "group2" : di
-}
-#dicon = dict([(1 , "a"), (2, "b")])  # {1: 'a', 2: 'b'}
-#dicon2 = dict(one=1, two=2)  # {'one': 1, 'two': 2}, does not work when key is a number
+    "group2" : di,
+    "group_list": ["1", "2", "3"],
+}  
+# {'group1': {'a': '1', 'b': '2'}, 'group2': {'one': 1, 'two': 2, 'three': 3, 'four': 4}, 'group_list': ['1', '2', '3']}
+dicon = dict([(1 , "a"), (2, "b")])  # {1: 'a', 2: 'b'}
+dicon2 = dict(one=1, two=2)  # {'one': 1, 'two': 2}, does not work when key is a number
 
 # Merge dictionaries
 def merge_dicts():
@@ -63,7 +74,7 @@ def merge_dicts():
     print(my_merged_dict)  #{'A': 1, 'B': 2, 'C': 3, 'D': 4}
 
 # Dictionary comprehension
-# dicomprehension = {x: x + "wow" for x in ("a", "b", "c")}  # {'a': 'awow', 'b': 'bwow', 'c': 'cwow'}
+dicomprehension = {x: x + "wow" for x in ("a", "b", "c")}  # {'a': 'awow', 'b': 'bwow', 'c': 'cwow'}
 
 def work_dict(dict:Dict):
     print("work_dict")
